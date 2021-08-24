@@ -1,6 +1,8 @@
 header {
   display: flex;
   justify-content: center;
+  border: 1px solid black;
+  margin-bottom: 0px;
 }
 
 section {
@@ -10,11 +12,12 @@ section {
   gap: 20px;
 }
 
-.article {
-  grid-column: 2/3;
+article {
+  border: 1px solid black;
 }
 
 footer {
   display: flex;
   justify-content: center;
+  border: 1px solid black;
 }
