@@ -52,25 +52,30 @@
       overskrift.textContent;
       console.log(overskrift.textContent);
 
-      // const article1 = document.querySelector("article:nth-child(1)");
-      // console.log(article);
-      // const article2 = document.querySelector("article:nth-child(2)");
-      // console.log(article);
+      const article1_img = document.querySelector("article:nth-child(1) img");
+      console.log(article1_img);
+      const article2_img = document.querySelector("article:nth-child(2) img");
+      console.log(article2_img);
 
-      const article1 = document.querySelector("article:first-of-type");
-      console.log(article1);
-      const article2 = document.querySelector(
-        "article:first-of-type + article"
-      );
-      console.log(article2);
+      article1_img.src = "img3.jpg";
+      article1_img.alt = "natur";
+      article2_img.src = "img3.jpg";
+      article2_img.alt = "natur";
 
-      overskrift.innerHTML = "<h1>Dette er en ny overskrift</h1>";
+      //   const article1 = document.querySelector("article:first-of-type");
+      //   console.log(article1);
+      //   const article2 = document.querySelector(
+      //     "article:first-of-type + article"
+      //   );
+      //   console.log(article2);
 
-      article1.textContent =
-        "<h2>Dette er en ny underoverskrift</h2> <p>Dette er en ny brødtekst</p>";
+      //   overskrift.innerHTML = "<h1>Dette er en ny overskrift</h1>";
 
-      article2.innerHTML =
-        "<h2>Dette er en ny underoverskrift</h2> <p>Dette er en ny brødtekst</p>";
+      //   article1.innerHTML =
+      //     "<h2>Dette er en ny underoverskrift</h2> <p>Dette er en ny brødtekst</p>";
+
+      //   article2.innerHTML =
+      //     "<h2>Dette er en ny underoverskrift</h2> <p>Dette er en ny brødtekst</p>";
     </script>
   </body>
 </html>
