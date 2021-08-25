@@ -14,6 +14,7 @@
   </head>
 
   <body>
+    <button>RESET</button>
     <h3>En</h3>
     <p>
       Gochujang blue bottle iPhone quinoa, umami lumbersexual semiotics disrupt
@@ -45,6 +46,36 @@
       salvia direct trade tbh.
     </p>
 
-    <script></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", start);
+
+      function start() {
+        let alleP = document.querySelectorAll("p");
+        alleP.forEach((p) => {
+          p.addEventListener("click", () => {
+            p.classList.add("typo");
+          });
+        });
+
+        let alleH3 = document.querySelectorAll("h3");
+        alleH3.forEach((h3) => {
+          h3.addEventListener("click", () => {
+            h3.classList.add("typo");
+          });
+        });
+
+        document.querySelector("button").addEventListener("click", () => {
+          alleP.forEach((p) => {
+            p.classList.remove("typo");
+          });
+        });
+
+        document.querySelector("button").addEventListener("click", () => {
+          alleH3.forEach((h3) => {
+            h3.classList.remove("typo");
+          });
+        });
+      }
+    </script>
   </body>
 </html>
