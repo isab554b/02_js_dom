@@ -48,36 +48,40 @@
     </footer>
 
     <script>
-      const overskrift = document.querySelector("h1");
-      overskrift.textContent;
-      console.log(overskrift.textContent);
-      overskrift.innerHTML = "<h1>Dette er en ny overskrift</h1>";
+      document.addEventListener("DOMContentLoaded", start);
+      function start() {
+        //UDSKIFT AF BILLEDER VIA JS
+        const article1_img = document.querySelector("article:nth-child(1) img");
+        console.log(article1_img);
+        const article2_img = document.querySelector("article:nth-child(2) img");
+        console.log(article2_img);
 
-      //UDSKIFT AF BILLEDER VIA JS
-      const article1_img = document.querySelector("article:nth-child(1) img");
-      console.log(article1_img);
-      const article2_img = document.querySelector("article:nth-child(2) img");
-      console.log(article2_img);
+        article1_img.src = "img3.jpg";
+        article1_img.alt = "natur";
+        article2_img.src = "img3.jpg";
+        article2_img.alt = "natur";
+      }
+      console.log(start);
 
-      article1_img.src = "img3.jpg";
-      article1_img.alt = "natur";
-      article2_img.src = "img3.jpg";
-      article2_img.alt = "natur";
+      //   const overskrift = document.querySelector("h1");
+      //   overskrift.textContent;
+      //   console.log(overskrift.textContent);
+      //   overskrift.innerHTML = "<h1>Dette er en ny overskrift</h1>";
 
-      //OPRETTELSE AF NYT ELEMENT VIA JS
-      let mainSection = document.querySelector("section");
-      //nyt article element
-      let newArticle = document.createElement("article");
-      //nyt h3 element
-      let overskriftArticle = document.createElement("h3");
-      //tekst til overskriften
-      let overskriftTxt = document.createTextNode("Article 3");
-      //indsæt tekst i overskrift
-      overskriftArticle.appendChild(overskriftTxt);
-      //tilføj overskrift til article
-      newArticle.appendChild(overskriftArticle);
-      //tilføj article til section
-      mainSection.appendChild(newArticle);
+      //   //OPRETTELSE AF NYT ELEMENT VIA JS
+      //   let mainSection = document.querySelector("section");
+      //   //nyt article element
+      //   let newArticle = document.createElement("article");
+      //   //nyt h3 element
+      //   let overskriftArticle = document.createElement("h3");
+      //   //tekst til overskriften
+      //   let overskriftTxt = document.createTextNode("Article 3");
+      //   //indsæt tekst i overskrift
+      //   overskriftArticle.appendChild(overskriftTxt);
+      //   //tilføj overskrift til article
+      //   newArticle.appendChild(overskriftArticle);
+      //   //tilføj article til section
+      //   mainSection.appendChild(newArticle);
 
       //UDSKIFT AT TEKST VIA JS
       //   const article1 = document.querySelector("article:first-of-type");
