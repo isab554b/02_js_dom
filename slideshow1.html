@@ -29,17 +29,24 @@
       // klik på knap for skifte billede
       const knap = document.querySelector("button");
       knap.addEventListener("click", skiftBillede);
+
+      let antal = billeder.length - 1;
+
       //opret funktion til at skifte billede
       function skiftBillede() {
         //hvis billedet < billed array så skal billedet skifte
-        if (number < 7) {
+        if (number < antal) {
           //tæl op
           number++;
           console.log(billeder[number]);
           billede.src = "billeder/" + billeder[number];
         } else {
           number = 0;
+          knap.textContent = "Videre";
           billede.src = "billeder/" + billeder[number];
+        }
+        if (number == antal) {
+          knap.textContent = "Forfra";
         }
       }
     </script>
